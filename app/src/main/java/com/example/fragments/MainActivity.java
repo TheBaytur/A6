@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void setNewFragment(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.frame_layout, fragment);
+        ft.replace(R.id.frame_layout, fragment); // add - добавляет, replace - заменяет.
+        ft.addToBackStack(null);
         ft.commit();
     }
 }
