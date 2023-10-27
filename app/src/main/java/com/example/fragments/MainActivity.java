@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private void setNewFragment(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.frame_layout, fragment); // add - добавляет, replace - заменяет.
-        ft.addToBackStack(null);
+        ft.addToBackStack(null); // - Не забывать, лучше replace.
         ft.commit();
     }
 }
